@@ -23,6 +23,7 @@ export function panelsByCategory() {
   const GlobalVariableSlider = require("webviz-core/src/panels/GlobalVariableSlider").default;
   const GlobalVariableDropdown = require("webviz-core/src/panels/GlobalVariableDropdown").default;
   const ImageViewPanel = require("webviz-core/src/panels/ImageView").default;
+  const HackathonPanel = require("webviz-core/src/panels/HackathonPanel").default;
   const Internals = require("webviz-core/src/panels/Internals").default;
   const NodePlayground = require("webviz-core/src/panels/NodePlayground").default;
   const Note = require("webviz-core/src/panels/Note").default;
@@ -60,6 +61,7 @@ export function panelsByCategory() {
     { title: "Global Variables", component: GlobalVariables },
     { title: "Global Variable Slider", component: GlobalVariableSlider },
     { title: "Global Variable Dropdown", component: GlobalVariableDropdown },
+    { title: "Hackathon Controls", component: HackathonPanel },
     { title: "Node Playground", component: NodePlayground },
     { title: "Notes", component: Note },
     { title: "Tab", component: Tab },
@@ -192,7 +194,7 @@ export function perPanelHooks() {
         return initLayoutNonWorker(sceneBuilderHooks);
       },
       // Duplicated in sceneBuilderHooks
-      consumePose: () => {},
+      consumePose: () => { },
       skipTransformFrame: null,
       useStaticTransformsData: () => null,
 
